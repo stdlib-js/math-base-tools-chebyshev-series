@@ -70,8 +70,9 @@
   ],
   "keywords": [
     "stdlib",
-    "math",
+    "stdmath",
     "mathematics",
+    "math",
     "chebyshev",
     "series",
     "polynomial",
