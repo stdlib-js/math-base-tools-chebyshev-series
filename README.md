@@ -58,20 +58,32 @@ where `c_n, c_{n-1}, ..., c_0` are constants and `T_i` are Chebyshev polynomials
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-tools-chebyshev-series
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import chebyshevSeries from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-chebyshev-series@esm/index.mjs';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-chebyshev-series@esm/index.mjs';
+var chebyshevSeries = require( '@stdlib/math-base-tools-chebyshev-series' );
 ```
 
 #### chebyshevSeries( x, c )
@@ -122,16 +134,11 @@ The returned function evaluates Chebyshev polynomials at `x/2`.
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
-import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@esm/index.mjs';
-import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@esm/index.mjs';
-import chebyshevSeries from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-tools-chebyshev-series@esm/index.mjs';
+```javascript
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var uniform = require( '@stdlib/random-array-uniform' );
+var logEachMap = require( '@stdlib/console-log-each-map' );
+var chebyshevSeries = require( '@stdlib/math-base-tools-chebyshev-series' );
 
 // Create an array of random coefficients:
 var coef = discreteUniform( 10, -100, 100 );
@@ -147,10 +154,6 @@ for ( i = 0; i < v.length; i++ ) {
 var evaluate = chebyshevSeries.factory( coef );
 var x = uniform( 100, -2.0, 2.0 );
 logEachMap( 'f(%d) = %d', x, evaluate );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -174,7 +177,7 @@ logEachMap( 'f(%d) = %d', x, evaluate );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
